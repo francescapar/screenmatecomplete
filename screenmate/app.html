@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScreenMate App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- AUTH SCREEN -->
+    <div id="auth-section">
+      <h1>ScreenMate</h1>
+
+      <div id="signup-form">
+        <h2>Create Account</h2>
+        <input type="text" id="signup-name" placeholder="Your Name">
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="password" id="signup-password" placeholder="Password (min 6 chars)">
+        <button id="signup-btn">Sign Up</button>
+        <p class="auth-switch">Already have an account? <a href="#" id="go-signin">Sign In</a></p>
+      </div>
+
+      <div id="signin-form" style="display:none;">
+        <h2>Welcome Back</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="signin-btn">Sign In</button>
+        <p class="auth-switch">Don't have an account? <a href="#" id="go-signup">Sign Up</a></p>
+      </div>
+
+      <p id="auth-error" style="display:none;"></p>
+    </div>
+
+    <!-- APP -->
+    <div id="app-section" style="display:none;">
+
+      <div class="app-header">
+        <div class="user-profile" id="open-profile-btn" title="Edit profile">
+          <div class="avatar" id="user-avatar"></div>
+          <span id="user-name"></span>
+          <span class="edit-hint">✏️</span>
+        </div>
+        <button id="signout-btn">Sign Out</button>
+      </div>
+
+      <!-- PROFILE MODAL -->
+      <div id="profile-modal" style="display:none;">
+        <div id="profile-modal-box">
+          <h2>Edit Profile</h2>
+
+          <div id="avatar-preview-wrap">
+            <div class="avatar" id="profile-avatar-preview"></div>
+          </div>
+
+          <label>Avatar Color</label>
+          <div id="color-picker">
+            <button class="color-swatch" data-color="#6c63ff" style="background:#6c63ff;"></button>
+            <button class="color-swatch" data-color="#e53935" style="background:#e53935;"></button>
+            <button class="color-swatch" data-color="#4caf50" style="background:#4caf50;"></button>
+            <button class="color-swatch" data-color="#ff9800" style="background:#ff9800;"></button>
+            <button class="color-swatch" data-color="#00bcd4" style="background:#00bcd4;"></button>
+            <button class="color-swatch" data-color="#e91e63" style="background:#e91e63;"></button>
+            <button class="color-swatch" data-color="#795548" style="background:#795548;"></button>
+            <button class="color-swatch" data-color="#607d8b" style="background:#607d8b;"></button>
+          </div>
+
+          <label>Name</label>
+          <input type="text" id="edit-name" placeholder="Your Name">
+
+          <label>Email</label>
+          <input type="email" id="edit-email" placeholder="Email">
+
+          <p id="profile-error" style="display:none;"></p>
+
+          <div class="profile-modal-btns">
+            <button id="save-profile-btn">Save</button>
+            <button id="close-profile-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <h1>My Watchlist</h1>
+
+      <!-- STATS -->
+      <div id="stats">
+        <div class="stat-card">
+          <span class="stat-number" id="stat-total">0</span>
+          <span class="stat-label">Total</span>
+        </div>
+        <div class="stat-card watched">
+          <span class="stat-number" id="stat-watched">0</span>
+          <span class="stat-label">Watched</span>
+        </div>
+        <div class="stat-card unwatched">
+          <span class="stat-number" id="stat-unwatched">0</span>
+          <span class="stat-label">Unwatched</span>
+        </div>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div id="progress-section">
+        <div id="progress-label">
+          <span>Watch Progress</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div id="progress-track">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="top-buttons">
+        <button id="toggle-form-btn">+ Add a Movie</button>
+        <button id="next-to-watch-btn">🎲 Next to Watch</button>
+      </div>
+
+      <form id="movie-form" style="display:none;">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="genre" placeholder="Genre">
+        <button type="submit">Add</button>
+        <button type="button" id="cancel-btn">Cancel</button>
+      </form>
+
+      <div id="next-to-watch-result" style="display:none;">
+        <span id="next-movie-text"></span>
+        <button id="close-next">✕</button>
+      </div>
+
+      <input type="text" id="search-bar" placeholder="🔍 Search by title...">
+
+      <div class="filter-buttons">
+        <button id="filter-all">All</button>
+        <button id="filter-watched">Watched</button>
+        <button id="filter-unwatched">Unwatched</button>
+      </div>
+
+      <ul id="movie-list"></ul>
+
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

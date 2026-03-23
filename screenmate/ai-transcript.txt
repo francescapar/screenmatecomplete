@@ -1,0 +1,151 @@
+AI DEVELOPMENT TRANSCRIPT
+Project: ScreenMate – Movie/TV Tracker
+Tool Used: ChatGPT
+
+--------------------------------------
+
+USER QUESTION:
+"I’m working on a mid-term project kickoff assignment where I need to create a web project, deploy it, customize a landing page, and include a README with planned features. I decided to make a movie/TV tracker app. How do I get started and what files should I create?"
+
+AI RESPONSE:
+
+Step 1 – Create the Project Structure
+
+Create a project folder with the following files:
+
+screenmate/
+index.html
+style.css
+README.md
+.gitignore
+
+--------------------------------------
+
+Step 2 – Landing Page Code
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScreenMate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>ScreenMate</h1>
+
+    <p>
+      ScreenMate is a web app that helps you track movies and TV shows you want to watch.
+      Add titles to your watchlist, mark them as watched, and organize what to watch next.
+    </p>
+
+    <button>Add Movie</button>
+  </div>
+
+</body>
+</html>
+
+--------------------------------------
+
+style.css
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255,255,255,0.85);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5750d3;
+}
+
+--------------------------------------
+
+Step 3 – Initialize Git Repository
+
+Run the following commands in the project folder:
+
+git init
+git add .
+git commit -m "Initial commit: setup project structure"
+
+--------------------------------------
+
+Step 4 – Connect GitHub Repository
+
+git remote add origin https://github.com/YOURUSERNAME/screenmate.git
+git branch -M main
+git push -u origin main
+
+--------------------------------------
+
+Step 5 – README File
+
+README.md
+
+# ScreenMate
+
+## Project Description
+ScreenMate is a web application that helps users track movies and TV shows they want to watch. Users can create a watchlist, mark titles as watched, and organize what they plan to watch next.
+
+## Planned Features
+- Add movies or TV shows to a watchlist
+- Mark titles as watched
+- Filter watchlist by watched/unwatched
+- Suggest a “Next to Watch” movie
+- Search for movies by title
+
+## Tech Stack
+HTML
+CSS
+JavaScript
+
+--------------------------------------
+
+Step 6 – Deployment
+
+Deploy the project using Netlify by connecting the GitHub repository and clicking “Deploy Site”.
+
+Example deployed URL:
+https://spontaneous-youtiao-ab200f.netlify.app/
+
+--------------------------------------
+
+End of Transcript
